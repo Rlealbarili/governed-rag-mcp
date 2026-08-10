@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "governed-rag": {
+      "command": "governed-rag-mcp",
+      "env": {
+        "GOVERNED_RAG_CLIENT_PROFILE": "restricted",
+        "GOVERNED_RAG_INDEX": "data/knowledge.sqlite",
+        "GOVERNED_RAG_EMBEDDING_PROVIDER": "hash",
+        "GOVERNED_RAG_HASH_DIMENSIONS": "64"
+      }
+    }
+  }
+}

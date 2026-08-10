@@ -1,0 +1,17 @@
+services:
+  governed-rag-mcp:
+    build: .
+    stdin_open: true
+    network_mode: none
+    environment:
+      GOVERNED_RAG_CLIENT_PROFILE: restricted
+      GOVERNED_RAG_INDEX: /app/data/knowledge.sqlite
+      GOVERNED_RAG_EMBEDDING_PROVIDER: hash
+      GOVERNED_RAG_HASH_DIMENSIONS: "64"
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m,mode=1777
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL

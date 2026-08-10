@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "governed-rag-mcp"
+version = "0.1.0"
+description = "Fail-closed hybrid RAG retrieval exposed through the Model Context Protocol."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+authors = [{ name = "Rafael Leal" }]
+keywords = ["mcp", "rag", "sqlite", "retrieval", "security"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+  "mcp==1.28.1",
+  "pydantic==2.12.3",
+  "sqlite-vec==0.1.9",
+]
+
+[project.urls]
+Documentation = "https://github.com/Rlealbarili/governed-rag-mcp#readme"
+Issues = "https://github.com/Rlealbarili/governed-rag-mcp/issues"
+Repository = "https://github.com/Rlealbarili/governed-rag-mcp"
+
+[project.optional-dependencies]
+dev = [
+  "mypy==1.18.2",
+  "pip-audit==2.9.0",
+  "pytest==9.1.1",
+  "pytest-cov==7.1.0",
+  "ruff==0.14.3",
+]
+
+[project.scripts]
+governed-rag-mcp = "governed_rag_mcp.server:main"
+governed-rag-build = "governed_rag_mcp.cli:build_main"
+governed-rag-eval = "governed_rag_mcp.cli:evaluate_main"
+governed-rag-audit = "governed_rag_mcp.cli:publication_audit_main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+
+[tool.coverage.run]
+source = ["governed_rag_mcp"]
+branch = true
+
+[tool.coverage.report]
+fail_under = 80
+show_missing = true
+skip_covered = true
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "S"]
+ignore = ["S101"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+packages = ["governed_rag_mcp"]

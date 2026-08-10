@@ -1,0 +1,45 @@
+{
+  "name": "repository-dogfooding-v1",
+  "k": 5,
+  "queries": [
+    {
+      "query": "reciprocal rank fusion vector FTS branch scores",
+      "expected_paths": ["src/governed_rag_mcp/fusion.py"],
+      "source": "code"
+    },
+    {
+      "query": "resolve client profile ValueError restricted",
+      "expected_paths": ["src/governed_rag_mcp/acl.py"],
+      "source": "code"
+    },
+    {
+      "query": "skipped_by_acl NRCReason ACL_DENIED no relevant context",
+      "expected_paths": ["src/governed_rag_mcp/service.py"],
+      "source": "code"
+    },
+    {
+      "query": "SearchRequest ConfigDict extra forbid strict query visible text",
+      "expected_paths": ["src/governed_rag_mcp/models.py"],
+      "source": "code"
+    },
+    {
+      "query": "collect repository documents symlink file too large binary invalid utf8 named secret",
+      "expected_paths": ["src/governed_rag_mcp/repository_ingest.py"],
+      "source": "code"
+    },
+    {
+      "query": "average_latency_ms by_winning_source query_text_recorded chunk_text_recorded",
+      "expected_paths": ["src/governed_rag_mcp/observability.py"],
+      "source": "code"
+    },
+    {
+      "query": "reciprocal rank fusion implementation",
+      "expected_paths": [],
+      "source": "code",
+      "profile": "restricted",
+      "expected_status": "NO_RELEVANT_CONTEXT",
+      "expected_reason": "acl_denied",
+      "expected_skipped_sources": ["code"]
+    }
+  ]
+}
