@@ -18,7 +18,7 @@ Baseline verificada localmente em 2026-08-10; `make ci` reproduz todos os valore
 
 | Gate | Resultado verificado |
 | --- | --- |
-| Testes unitarios, integracao e E2E MCP `stdio` real | 45 passaram |
+| Testes unitarios, integracao e E2E MCP `stdio` real | 46 passaram |
 | Cobertura Python com branches | 87,59% (gate minimo: 80%) |
 | Dogfooding do repositorio | HitRate@5 = 1,00; MRR = 1,00; 6/6 modulos em rank 1; negacao ACL PASS |
 | Contratos estaticos | Ruff limpo; mypy estrito limpo |

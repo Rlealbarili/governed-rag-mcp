@@ -18,7 +18,7 @@ Verified locally on 2026-08-10; every value is reproduced by `make ci`:
 
 | Gate | Verified result |
 | --- | --- |
-| Unit, integration, and real MCP `stdio` E2E tests | 45 passed |
+| Unit, integration, and real MCP `stdio` E2E tests | 46 passed |
 | Branch-aware Python coverage | 87.59% (minimum gate: 80%) |
 | Repository dogfooding | HitRate@5 = 1.00; MRR = 1.00; 6/6 modules at rank 1; ACL denial PASS |
 | Static contracts | Ruff clean; strict mypy clean |
