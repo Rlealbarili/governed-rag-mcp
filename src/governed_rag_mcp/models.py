@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator
@@ -12,18 +12,18 @@ ConfidenceMode = Literal["normal", "strict"]
 ConfidenceLevel = Literal["high", "medium", "low"]
 
 
-class ClientProfile(str, Enum):
+class ClientProfile(StrEnum):
     AUDITOR = "auditor"
     ENGINEER = "engineer"
     RESTRICTED = "restricted"
 
 
-class Status(str, Enum):
+class Status(StrEnum):
     PASS = "PASS"  # noqa: S105 - protocol status, not a credential.
     NO_RELEVANT_CONTEXT = "NO_RELEVANT_CONTEXT"
 
 
-class NRCReason(str, Enum):
+class NRCReason(StrEnum):
     ACL_DENIED = "acl_denied"
     PLANE_FAILED = "plane_failed"
     STRICT_BLOCKED_LOW = "strict_blocked_low"
