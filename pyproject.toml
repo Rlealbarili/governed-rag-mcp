@@ -21,7 +21,7 @@ classifiers = [
 ]
 dependencies = [
   "mcp==1.28.1",
-  "pydantic==2.12.3",
+  "pydantic==2.13.4",
   "sqlite-vec==0.1.9",
 ]
 
