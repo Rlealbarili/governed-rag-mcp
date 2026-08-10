@@ -17,7 +17,7 @@ COPY pyproject.toml README.md LICENSE ./
 COPY src ./src
 COPY docs ./docs
 COPY README.pt-BR.md SECURITY.md ./
-RUN python -m pip install --no-cache-dir --upgrade pip==26.1.2 \
+RUN python -m pip install --no-cache-dir --upgrade pip==26.2.1 \
     && python -m pip install --no-cache-dir . \
     && governed-rag-build --root /app --output /app/data/knowledge.sqlite --dimensions 64 \
     && chown -R appuser:appuser /app

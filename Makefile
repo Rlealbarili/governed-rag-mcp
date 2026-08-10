@@ -6,7 +6,7 @@ BIN := $(VENV)/bin
 
 setup:
 	$(PYTHON) -m venv $(VENV)
-	$(BIN)/python -m pip install --upgrade pip==26.1.2
+	$(BIN)/python -m pip install --upgrade pip==26.2.1
 	$(BIN)/python -m pip install -e '.[dev]'
 
 build-index:
