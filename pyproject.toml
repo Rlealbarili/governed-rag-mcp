@@ -20,8 +20,8 @@ classifiers = [
   "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 dependencies = [
-  "mcp==1.29.0",
-  "pydantic==2.13.4",
+  "mcp==1.29.1",
+  "pydantic==2.13.5",
   "sqlite-vec==0.1.9",
 ]
 
@@ -36,7 +36,7 @@ dev = [
   "pip-audit==2.10.1",
   "pytest==9.1.1",
   "pytest-cov==7.1.0",
-  "ruff==0.16.2",
+  "ruff==0.16.5",
 ]
 
 [project.scripts]
