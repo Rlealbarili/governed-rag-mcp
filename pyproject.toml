@@ -20,7 +20,7 @@ classifiers = [
   "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 dependencies = [
-  "mcp==1.29.0",
+  "mcp==1.30.0",
   "pydantic==2.13.4",
   "sqlite-vec==0.1.9",
 ]
